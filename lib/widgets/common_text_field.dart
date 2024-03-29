@@ -9,12 +9,14 @@ class CommonTextField extends StatelessWidget {
     required this.hintText,
     this.controller,
     this.maxLines,
+    this.suffixIcon,
   });
 
   final String title;
   final String hintText;
   final TextEditingController? controller;
   final int? maxLines;
+  final Widget? suffixIcon;
 
   @override
   Widget build(BuildContext context) {
@@ -34,6 +36,7 @@ class CommonTextField extends StatelessWidget {
           },
           decoration: InputDecoration(
             hintText: hintText,
+            suffixIcon: suffixIcon,
           ),
           onChanged: (value) {},
         ),

@@ -3,10 +3,12 @@ import 'package:gap/gap.dart';
 import 'package:go_router/go_router.dart';
 import 'package:intl/intl.dart';
 import 'package:todoapp/widgets/widgets.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class CreateTaskScreen extends StatelessWidget {
   static CreateTaskScreen builder(BuildContext context, GoRouterState state) =>
       const CreateTaskScreen();
+
   const CreateTaskScreen({super.key});
 
   @override
@@ -28,10 +30,14 @@ class CreateTaskScreen extends StatelessWidget {
             const Gap(16),
             Row(
               children: [
-                const Expanded(
+                Expanded(
                   child: CommonTextField(
                     title: 'Date',
                     hintText: 'March 20, 2024',
+                    suffixIcon: IconButton(
+                      onPressed: () {},
+                      icon: const FaIcon(FontAwesomeIcons.calendar),
+                    ),
                   ),
                 ),
                 const Gap(10),
@@ -39,6 +45,10 @@ class CreateTaskScreen extends StatelessWidget {
                   child: CommonTextField(
                     title: 'Time',
                     hintText: DateFormat('kk:mm').format(DateTime.now()),
+                    suffixIcon: IconButton(
+                      onPressed: () {},
+                      icon: const FaIcon(FontAwesomeIcons.clock),
+                    ),
                   ),
                 ),
               ],
