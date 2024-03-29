@@ -34,6 +34,7 @@ class CreateTaskScreen extends StatelessWidget {
                   child: CommonTextField(
                     title: 'Date',
                     hintText: 'March 20, 2024',
+                    readOnly: true,
                     suffixIcon: IconButton(
                       onPressed: () {},
                       icon: const FaIcon(FontAwesomeIcons.calendar),
@@ -45,6 +46,7 @@ class CreateTaskScreen extends StatelessWidget {
                   child: CommonTextField(
                     title: 'Time',
                     hintText: DateFormat('kk:mm').format(DateTime.now()),
+                    readOnly: true,
                     suffixIcon: IconButton(
                       onPressed: () {},
                       icon: const FaIcon(FontAwesomeIcons.clock),

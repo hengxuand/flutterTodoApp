@@ -10,6 +10,7 @@ class CommonTextField extends StatelessWidget {
     this.controller,
     this.maxLines,
     this.suffixIcon,
+    this.readOnly = false,
   });
 
   final String title;
@@ -17,6 +18,7 @@ class CommonTextField extends StatelessWidget {
   final TextEditingController? controller;
   final int? maxLines;
   final Widget? suffixIcon;
+  final bool readOnly;
 
   @override
   Widget build(BuildContext context) {
@@ -29,6 +31,7 @@ class CommonTextField extends StatelessWidget {
         ),
         const Gap(10),
         TextField(
+          readOnly: readOnly,
           controller: controller,
           maxLines: maxLines,
           onTapOutside: (event) {
